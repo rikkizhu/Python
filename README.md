@@ -42,7 +42,13 @@
   - list 查找速度慢，需要有序查找；dict 查找速度快，不管有多少个元素时间都一样
   - list 可以重复，存放任意对象 ； dict 的 key 为不可变对象，且不可重复（字典的值可以是任意对象）
 
-
-
+### JSON 和 dict 的区别
+  - JSON 是一种数据格式，纯字符串。dict 是一种完整的数据结构；
+  - dict 是一个完整的数据结构，是对 Hash Table 这一数据结构的一种实现，是一套从存储到提取都封装好了的方案。它使用内置的哈希函数来规划 key 对应 value 的存储位置，从而获得O（1）的数据读取速度；
+  - JSON 的 key 只能是字符串，Python 的 dict 可以是任何可 hash 对象（不可变对象）；
+  - JSON 的 key 可以是有序、可重复的；dict 的 key 不可重复，且无序；
+  - JSON 任意 key 存在默认值 undefined，dict 默认没有默认值；
+  - JSON 访问方式可以是[],也可以是.，遍历方式分 in、of；dict 的 value 仅可以下标访问；
+  - dict 可以嵌套 tuple，JSON 里只有数组；
 
 
